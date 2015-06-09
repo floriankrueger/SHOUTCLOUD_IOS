@@ -10,11 +10,35 @@
 		CFC4B6B41B1F2DB500430A30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC4B6B31B1F2DB500430A30 /* Images.xcassets */; };
 		CFC4B6CF1B1F2EA400430A30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4B6CD1B1F2EA400430A30 /* AppDelegate.swift */; };
 		CFC4B6D61B1F2EB300430A30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4B6D41B1F2EB300430A30 /* ViewController.swift */; };
-		CFC4B6D81B1F2F3900430A30 /* SHOUTCLOUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC4B6D71B1F2F3900430A30 /* SHOUTCLOUD.framework */; };
 		CFC4B6DE1B1F323300430A30 /* Manuscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC4B6DD1B1F323300430A30 /* Manuscript.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CF40D52A1B270C6F005C7781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF40D5251B270C6F005C7781 /* SHOUTCLOUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CFC4B6481B1DD30E00430A30;
+			remoteInfo = SHOUTCLOUD;
+		};
+		CF40D52C1B270C6F005C7781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF40D5251B270C6F005C7781 /* SHOUTCLOUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CFC4B66A1B1DD3B700430A30;
+			remoteInfo = Tests;
+		};
+		CF40D52E1B270C75005C7781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF40D5251B270C6F005C7781 /* SHOUTCLOUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CFC4B6471B1DD30E00430A30;
+			remoteInfo = SHOUTCLOUD;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		CF40D5251B270C6F005C7781 /* SHOUTCLOUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SHOUTCLOUD.xcodeproj; sourceTree = "<group>"; };
 		CFC4B6A71B1F2DB500430A30 /* EXAMPLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXAMPLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC4B6B31B1F2DB500430A30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CFC4B6CD1B1F2EA400430A30 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,16 +54,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC4B6DE1B1F323300430A30 /* Manuscript.framework in Frameworks */,
-				CFC4B6D81B1F2F3900430A30 /* SHOUTCLOUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF40D5261B270C6F005C7781 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF40D52B1B270C6F005C7781 /* SHOUTCLOUD.framework */,
+				CF40D52D1B270C6F005C7781 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CFC4B69E1B1F2DB500430A30 = {
 			isa = PBXGroup;
 			children = (
+				CF40D5251B270C6F005C7781 /* SHOUTCLOUD.xcodeproj */,
 				CFC4B6A91B1F2DB500430A30 /* EXAMPLE */,
 				CFC4B6D91B1F2F5E00430A30 /* Frameworks */,
 				CFC4B6A81B1F2DB500430A30 /* Products */,
@@ -113,6 +146,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CF40D52F1B270C75005C7781 /* PBXTargetDependency */,
 			);
 			name = EXAMPLE;
 			productName = EXAMPLE;
@@ -144,12 +178,35 @@
 			mainGroup = CFC4B69E1B1F2DB500430A30;
 			productRefGroup = CFC4B6A81B1F2DB500430A30 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF40D5261B270C6F005C7781 /* Products */;
+					ProjectRef = CF40D5251B270C6F005C7781 /* SHOUTCLOUD.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CFC4B6A61B1F2DB500430A30 /* EXAMPLE */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF40D52B1B270C6F005C7781 /* SHOUTCLOUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SHOUTCLOUD.framework;
+			remoteRef = CF40D52A1B270C6F005C7781 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF40D52D1B270C6F005C7781 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = CF40D52C1B270C6F005C7781 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CFC4B6A51B1F2DB500430A30 /* Resources */ = {
@@ -191,6 +248,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF40D52F1B270C75005C7781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SHOUTCLOUD;
+			targetProxy = CF40D52E1B270C75005C7781 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CFC4B6C41B1F2DB500430A30 /* Debug */ = {

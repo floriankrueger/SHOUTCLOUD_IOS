@@ -19,6 +19,7 @@ class NetworkSessionImplementation: NSObject, NetworkSession {
   }
 
   func dataTaskWithRequest(request: NSURLRequest, completionHandler: ((NSData!, NSURLResponse!, NSError!) -> Void)?) {
-    self.urlSession.dataTaskWithRequest(request, completionHandler: completionHandler)
+    let task = self.urlSession.dataTaskWithRequest(request, completionHandler: completionHandler)
+    task.resume()
   }
 }

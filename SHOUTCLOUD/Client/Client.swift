@@ -8,8 +8,8 @@
 
 import UIKit
 
-class Client: NSObject {
-  static let sharedClient = Client(networkSession: NetworkSessionImplementation.sharedSession)
+public class Client: NSObject {
+  public static let sharedClient = Client(networkSession: NetworkSessionImplementation.sharedSession)
 
   private let scheme = "HTTP"
   private let host = "API.SHOUTCLOUD.IO"
@@ -24,7 +24,7 @@ class Client: NSObject {
     self.networkSession = networkSession
   }
 
-  func shout(message: String, success: (message: String) -> Void, failure: (error: NSError) -> Void) {
+  public func shout(message: String, success: (message: String) -> Void, failure: (error: NSError) -> Void) {
     let request = Request(input: message)
     self.POST(self.urlForService(.Shout),
       request: request,
