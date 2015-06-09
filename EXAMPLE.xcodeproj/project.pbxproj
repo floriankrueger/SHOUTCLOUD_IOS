@@ -11,6 +11,7 @@
 		CFC4B6CF1B1F2EA400430A30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4B6CD1B1F2EA400430A30 /* AppDelegate.swift */; };
 		CFC4B6D61B1F2EB300430A30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4B6D41B1F2EB300430A30 /* ViewController.swift */; };
 		CFC4B6D81B1F2F3900430A30 /* SHOUTCLOUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC4B6D71B1F2F3900430A30 /* SHOUTCLOUD.framework */; };
+		CFC4B6DE1B1F323300430A30 /* Manuscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC4B6DD1B1F323300430A30 /* Manuscript.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		CFC4B6D21B1F2EB300430A30 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC4B6D41B1F2EB300430A30 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFC4B6D71B1F2F3900430A30 /* SHOUTCLOUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SHOUTCLOUD.framework; path = "build/Debug-iphoneos/SHOUTCLOUD.framework"; sourceTree = "<group>"; };
+		CFC4B6DD1B1F323300430A30 /* Manuscript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Manuscript.framework; path = Carthage/Build/iOS/Manuscript.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC4B6DE1B1F323300430A30 /* Manuscript.framework in Frameworks */,
 				CFC4B6D81B1F2F3900430A30 /* SHOUTCLOUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +92,7 @@
 		CFC4B6D91B1F2F5E00430A30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFC4B6DD1B1F323300430A30 /* Manuscript.framework */,
 				CFC4B6D71B1F2F3900430A30 /* SHOUTCLOUD.framework */,
 			);
 			name = Frameworks;
@@ -104,6 +108,7 @@
 				CFC4B6A31B1F2DB500430A30 /* Sources */,
 				CFC4B6A41B1F2DB500430A30 /* Frameworks */,
 				CFC4B6A51B1F2DB500430A30 /* Resources */,
+				CFC4B6DC1B1F307900430A30 /* Run Script (Carthage) */,
 			);
 			buildRules = (
 			);
@@ -156,6 +161,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CFC4B6DC1B1F307900430A30 /* Run Script (Carthage) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Manuscript.framework",
+			);
+			name = "Run Script (Carthage)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFC4B6A31B1F2DB500430A30 /* Sources */ = {
@@ -255,11 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/EXAMPLE/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -269,11 +294,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/EXAMPLE/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

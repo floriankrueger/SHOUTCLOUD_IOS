@@ -7,20 +7,52 @@
 //
 
 import UIKit
+import Manuscript
 import SHOUTCLOUD
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  // MARK: - Init
+
+  init() {
+    super.init(nibName: nil, bundle: nil)
+    self.setup()
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  required init(coder aDecoder: NSCoder) {
+    fatalError("storyboards are incompatible with truth and beauty")
   }
 
+  // MARK: - View
 
+  override func loadView() {
+    super.loadView()
+    self.setupView()
+    self.setupSubviews()
+    self.setupLayout()
+  }
+
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+  }
+
+  // MARK: - Setup & Layout
+
+  private func setup() {
+    self.title = "SHOUTCLOUD"
+  }
+
+  private func setupView() {
+    self.view.backgroundColor = UIColor.whiteColor()
+  }
+
+  private func setupSubviews() {
+
+  }
+
+  private func setupLayout() {
+    
+  }
+  
 }
 
