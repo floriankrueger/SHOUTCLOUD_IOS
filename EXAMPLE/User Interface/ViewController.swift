@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SHOUTCLOUD
 
 class ViewController: UIViewController {
 
