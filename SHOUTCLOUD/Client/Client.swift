@@ -8,7 +8,13 @@
 
 import UIKit
 
+/**
+ THE SHOUTCLOUD CLIENT. GET YOUR INSTANCE WITH `SHOUTCLOUD.Client.sharedClient`.
+ */
 public class Client: NSObject {
+
+  /// USE THIS CLIENT WHEN ATTEMPTING TO SHOUT AT YOUR USERS. OR YOUR BOSS. OR YOUR IDE. OR YOUR
+  /// CAT. OR USING CAT. JUST REMEMBER TO USE THIS CLIENT WHEN YOU WANT TO SHOUT.
   public static let sharedClient = Client(networkSession: NetworkSessionImplementation.sharedSession)
 
   private let scheme = "HTTP"
@@ -24,6 +30,13 @@ public class Client: NSObject {
     self.networkSession = networkSession
   }
 
+  /**
+   THIS IS WHY WE'RE HERE: WHO DOESN'T WANT A SIMPLE WAY TO SHOUT BACK TO THE USER SOMETIMES?
+
+   :param: message WHATEVER YOU WANT TO SHOUT
+   :param: success THE BLOCK THAT THE CLOUD IS SHOUTING BACK TO
+   :param: failure THIS BLOCK IS CALLED WHEN SOMETHING GOES WRONG
+   */
   public func shout(message: String, success: (message: String) -> Void, failure: (error: NSError) -> Void) {
     let request = Request(input: message)
     self.POST(self.urlForService(.Shout),
